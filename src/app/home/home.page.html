@@ -1,20 +1,55 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Application Settings
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-toggle [(ngModel)]="option1" (ionChange)="createPreferences()">Option 1</ion-toggle>
+    </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-item>
+      <ion-toggle [(ngModel)]="option2" (ionChange)="createPreferences()">Option 2</ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-toggle [(ngModel)]="option3" (ionChange)="createPreferences()">Option 3</ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-range [(ngModel)]="range" label="Range" (ionChange)="createPreferences()"></ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox [(ngModel)]="checkbox1" labelPlacement="end" (ionChange)="createPreferences()">Checkbox 1</ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox [(ngModel)]="checkbox2" labelPlacement="end" (ionChange)="createPreferences()">Checkbox 2</ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox [(ngModel)]="checkbox3" labelPlacement="end" (ionChange)="createPreferences()">Checkbox 3</ion-checkbox>
+    </ion-item>
+
+    <ion-radio-group>
+
+      <ion-item [(ngModel)] = "radio" (ionChange)="createPreferences()">
+          <ion-radio labelPlacement="end">Radio Option 1</ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-radio labelPlacement="end">Radio Option 2</ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+  </ion-list>
+
+  <ion-button expand="full" (click)="resetPreferences">Reset all settings</ion-button>
+
 </ion-content>
