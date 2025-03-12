@@ -54,7 +54,7 @@ export class HomePage {
       radio : this.radio
     }
 
-  await Preferences.set({ key: 'userSettings', value: JSON.stringify('userSettings')});
+  await Preferences.set({ key: 'userSettings', value: JSON.stringify(userSettings)});
   }
 
   async resetPreferences(){

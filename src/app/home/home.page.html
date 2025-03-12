@@ -21,7 +21,8 @@
     </ion-item>
 
     <ion-item>
-      <ion-range [(ngModel)]="range" label="Range" (ionChange)="createPreferences()"></ion-range>
+      <ion-label for="range">Range Value: {{  range }}</ion-label>
+      <ion-range id="range" [(ngModel)]="range" (ionChange)="createPreferences()"></ion-range>
     </ion-item>
 
     <ion-item>
